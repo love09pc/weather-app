@@ -6,6 +6,7 @@ const API_KEY = 'e18b405b789c54649e4d838c265e1b29';
 
 function App() {
   // 도시 이름을 입력받기 위한 state
+  
   const [city, setCity] = useState('');
   // 날씨 정보를 저장할 state
   const [weather, setWeather] = useState(null);
