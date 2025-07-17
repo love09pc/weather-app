@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# React 날씨 앱 (OpenWeatherMap API)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 소개
+React로 만든 심플하고 예쁜 날씨 앱입니다. 사용자가 도시 이름을 입력하면 OpenWeatherMap API에서 실시간 날씨 정보를 받아와 카드 형태로 보여줍니다.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 주요 기능
+- 도시 이름 입력 후 검색 버튼 또는 Enter 키로 날씨 조회
+- OpenWeatherMap API에서 실시간 날씨 정보(도시명, 온도(℃), 날씨 설명, 아이콘) 표시
+- 잘못된 도시 입력 시 화면에 빨간 에러 메시지 표시
+- 검색창, 버튼, 날씨 카드 모두 반응형 & 감각적인 디자인 적용
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 사용 기술
+- React (CRA 기반)
+- CSS (직접 커스텀)
+- OpenWeatherMap API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 실행 방법
+1. 프로젝트 폴더로 이동
+   ```bash
+   cd weather-app
+   ```
+2. 패키지 설치
+   ```bash
+   npm install
+   ```
+3. OpenWeatherMap에서 API 키 발급 후, `src/App.js` 상단의 `API_KEY` 변수에 입력
+   ```js
+   const API_KEY = '여기에_본인_API키_입력';
+   ```
+4. 앱 실행
+   ```bash
+   npm start
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 커스터마이징
+- **API 키 변경**: `src/App.js` 파일에서 `API_KEY` 값만 바꿔주면 됩니다.
+- **디자인 수정**: `src/App.css`에서 색상, 카드 스타일, 버튼 스타일 등 자유롭게 변경 가능
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 디자인 특징
+- 카드에 유리효과(blur), 컬러 그림자, 라운드 처리 등 현대적인 UI
+- 검색창과 버튼을 한 줄로 정렬, 그라데이션 버튼, 부드러운 애니메이션
+- 모바일에서도 자연스럽게 보이는 반응형 스타일
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 에러 처리
+- 존재하지 않는 도시를 입력하면 alert 대신 화면에 빨간 글씨로 에러 메시지 표시
+- 입력값이 바뀌면 에러 메시지가 자동으로 사라짐
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 기타
+- 날씨 아이콘은 OpenWeatherMap에서 제공하는 이미지를 사용합니다.
+- 코드에 상세한 주석이 달려 있어 초보자도 쉽게 이해할 수 있습니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ai를 쓰면 쉽게 쉽게 될거 같았는데 생각 보다 힘들었다.
+ai의 사용처와 용도도 다 다르고 뭐가 알아갈 수록 더 어렵고 머리아프다.
+ai를 쓰는 것도 진짜 막힐 때만 써야 겠다 이런 번거러운 일을 자주 하면 오래 걸릴 것 같다.

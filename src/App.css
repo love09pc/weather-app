@@ -36,3 +36,154 @@
     transform: rotate(360deg);
   }
 }
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+  margin-bottom: 0;
+  background: rgba(255,255,255,0.45);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(163, 196, 243, 0.13);
+  padding: 6px 10px;
+}
+
+.input-group:focus-within {
+  box-shadow: 0 4px 16px #a5b4fc55;
+}
+
+input[type="text"] {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1.1rem;
+  background: transparent;
+  color: #3b3b5c;
+  font-weight: 500;
+  width: 220px;
+  transition: background 0.2s, color 0.2s;
+}
+
+input[type="text"]::placeholder {
+  color: #b4b4cc;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10px;
+  box-shadow: 0 2px 8px #a5b4fc33;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover, button:focus {
+  background: linear-gradient(90deg, #38bdf8 0%, #6366f1 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 24px #6366f144;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.weather-info {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(58, 133, 191, 0.18), 0 2px 8px rgba(255, 182, 193, 0.12);
+  text-align: center;
+  margin-top: 40px;
+  min-width: 340px;
+  max-width: 90vw;
+  padding: 40px 48px 32px 48px;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+.weather-info img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 4px 16px #a5b4fc88);
+}
+
+.weather-info h2 {
+  margin: 0 0 10px 0;
+  font-size: 2.4rem;
+  color: #3b3b5c;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px #a5b4fc33;
+}
+
+.weather-info p {
+  margin: 8px 0;
+  font-size: 1.25rem;
+  color: #5c5c7a;
+  font-weight: 500;
+}
+
+.weather-info p:last-child {
+  font-size: 1.1rem;
+  color: #7c3aed;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin-top: 6px;
+}
+
+/* 에러 메시지 스타일 */
+.app-container > div[style*='color: red'] {
+  color: #ef4444 !important;
+  background: rgba(255, 0, 0, 0.07);
+  border-radius: 8px;
+  padding: 8px 0 4px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 18px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 4px #ef444422;
+}
+
+@media (max-width: 600px) {
+  .weather-info {
+    min-width: 95vw;
+    padding: 18px 4vw 16px 4vw;
+  }
+  .input-group {
+    flex-direction: column;
+    padding: 8px 4px;
+  }
+  input[type="text"] {
+    width: 60vw;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  button {
+    width: 100%;
+    margin-left: 0;
+    padding: 14px 0;
+    font-size: 1rem;
+  }
+}
